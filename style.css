@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* common */
+:root { 
+    --font-family-roboto: 'Roboto', sans-serif;
+    --font-family-pt: 'PT Sans', sans-serif;
+
+    --btn-primary: #86A8AA;
+    --btn-primary-hover: #689295;
+
+    --btn-success:#7B6055;
+    --btn-success-hover:#675047;
+
+    --bg-light:#DADDCC;
+    --black:#2F3126;
+}
+
+
+h1,h2,h3,h4,h5,h6, .btn {  
+    font-family: var(--font-family-roboto);
+}
+
+p, li {  
+    font-family: var(--font-family-pt);
+}
+
+
+/* primary btn */
+.btn-primary { 
+    background-color: var(--btn-primary); 
+    border-color: var(--btn-primary);
+}
+
+.btn-primary:hover { 
+    background-color: var(--btn-primary-hover); 
+    border-color: var(--btn-primary-hover);
+}
+
+.btn-primary:active, .btn-primary:focus{ 
+    background-color: var(--btn-primary); 
+    border-color: var(--btn-primary);
+}
+
+.btn-primary:focus{ 
+    box-shadow: 0 0 0 0.25rem rgba(134, 168, 170, .5);
+}
+
+
+/* success btn */
+.btn-success { 
+    background-color: var(--btn-success); 
+    border-color: var(--btn-success);
+}
+
+.btn-success:hover { 
+    background-color: var(--btn-success-hover); 
+    border-color: var(--btn-success-hover);
+}
+
+.btn-success:active, .btn-success:focus, .btn-outline-success:active, .btn-outline-success:focus{ 
+    background-color: var(--btn-success); 
+    border-color: var(--btn-success);
+}
+
+.btn-success:focus, .btn-outline-success:focus{ 
+    box-shadow: 0 0 0 0.25rem rgba(123, 96, 85, .5);
+}
+
+
+.btn-outline-success {
+    color: var(--btn-success);
+    border-color: var(--btn-success);
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: var(--btn-success-hover);
+    border-color: var(--btn-success-hover);
+}
+
+
+
+
+/* background light  */
+.bg-light {
+    background-color: var(--bg-light) !important;
+}
+
+
+/* nav */
+.register-buttons { gap:20px; }
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--black);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--btn-success);
+}
+
+
+/* footer */
+footer ul { gap:20px; }
+footer ul .fa {
+    color:#fff;
+    font-size: 20px;
+}
+
+
+/* hero section */
+.hero-section, .upcoming-events {
+    background-color: #F6F7F2;
+}
+
+.card-header {
+    background-color: var(--bg-light);
+}
+
+
+
+
+/* calender page css */
+.booking-inner {
+    background: #F6F7F2; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px; padding: 40px; cursor: pointer;
+}
+
+.booking-inner .fa{
+    font-size: 30px;
+    color:#86A8AA;
+}
+
+.modal-footer { justify-content: center !important; border-top: none !important; }
+a.password { text-decoration: none; }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+	
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+ 
+
+</head>
+<body>
+    
+<!-- navbar start -->
+<section>
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="calender.html">Calender</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notes.html">Notes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="clients.html">Clients</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="budget.html">Budget</a>
+                </li>
+
+              </ul>
+              <form class="d-flex register-buttons">
+
+                  <button type="button" class="btn btn-outline-success" 
+                    data-bs-toggle="modal" data-bs-target="#loginModel">
+                    Login
+                  </button>
+
+                  <button type="button" class="btn btn-success" 
+                    data-bs-toggle="modal" data-bs-target="#registerModel">
+                    Register
+                  </button>
+
+              </form>
+            </div>
+          </div>
+        </nav>
+  </header>
+</section>
+
+
+<!-- login Modal -->
+<div class="modal fade" id="loginModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form>
+          <div class="mb-3">
+            <label for="fullname" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="userName">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+            <a href="#" class="form-text password">Forgot Password</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Log In</button>
+      </form>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form>
+          <div class="mb-3">
+            <label for="fullname" class="form-label">User Full Name</label>
+            <input type="text" class="form-control" id="userName">
+          </div>
+          
+          <div class="mb-3">
+            <label for="fullname" class="form-label">User Nick Name</label>
+            <input type="text" class="form-control" id="userName">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">User Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">        
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+
+      </div>
+  
+    </div>
+  </div>
+</div>
+<!-- navbar end -->
+
+
+
+<section class="booking">
+<div class="container my-5">
+  <div class="row">
+
+    <div class="col-lg-6 col-md-6">
+      <div class="booking-inner mb-3" 
+      data-bs-toggle="modal" data-bs-target="#moodModel" data-bs-whatever="@mdo">
+            <i class="fa fa-sticky-note d-flex justify-content-center" aria-hidden="true"></i>
+            <h4 class="text-center text-uppercase pt-3">Mood Board</h4>
+    </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6">
+    <div class="booking-inner"
+    data-bs-toggle="modal" data-bs-target="#notesModel" data-bs-whatever="@fat">
+            <i class="fa fa-tachometer d-flex justify-content-center" aria-hidden="true"></i>
+            <h4 class="text-center text-uppercase pt-3">Notes</h4>
+      </div>
+    </div>
+
+ 
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- moodboard Modal -->
+<div class="modal fade" id="moodModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mood Board</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>You can visualize all your ideas here</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- notes Modal -->
+<div class="modal fade" id="notesModel" tabindex="-1" aria-labelledby="bookSessionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookSessionModalLabel">Notes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Lorem Ipsum has been the industry's standard dummy text ever 
+            since the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text ever 
+            since the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text ever 
+            since the 1500s, when an unknown printer took.</p>
+
+            <p class="mt-3">Lorem Ipsum has been the industry's standard dummy text ever 
+            since the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text ever 
+            since the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text ever 
+            since the 1500s, when an unknown printer took.</p>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- footer start -->
+<section>
+  <footer class="py-3 mt-4 bg-dark text-white">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li><a href="#" class="px-2"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="px-2"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="px-2"><i class="fa fa-twitter" aria-hidden="true"></i></i></a></li>
+  </ul>
+    <p class="text-center">&copy; Copyright 2023 | All Right Reserved</p>
+  </footer>
+</section>
+<!-- footer end -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Photography Porject</title>
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/style.css">
+		
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    </head>
+<body>
+    
+<!-- navbar start -->
+<section>
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="calender.html">Calender</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notes.html">Notes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="clients.html">Clients</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="budget.html">Budget</a>
+                </li>
+
+              </ul>
+              <form class="d-flex register-buttons">
+
+                  <button type="button" class="btn btn-outline-success" 
+                    data-bs-toggle="modal" data-bs-target="#loginModel">
+                    Login
+                  </button>
+
+                  <button type="button" class="btn btn-success" 
+                    data-bs-toggle="modal" data-bs-target="#registerModel">
+                    Register
+                  </button>
+
+              </form>
+            </div>
+          </div>
+        </nav>
+  </header>
+</section>
+
+
+
+
+
+<!-- login Modal -->
+<div class="modal fade" id="loginModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form>
+            <div class="mb-3">
+              <label for="fullname" class="form-label">User Name</label>
+              <input type="text" class="form-control" id="userName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+              <a href="#" class="form-text password">Forgot Password</a>
+            </div>
+  
+            <button type="submit" class="btn btn-primary">Log In</button>
+        </form>
+  
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <!-- Register Modal -->
+  <div class="modal fade" id="registerModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form>
+            <div class="mb-3">
+              <label for="fullname" class="form-label">User Full Name</label>
+              <input type="text" class="form-control" id="userName">
+            </div>
+            
+            <div class="mb-3">
+              <label for="fullname" class="form-label">User Nick Name</label>
+              <input type="text" class="form-control" id="userName">
+            </div>
+  
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">User Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">        
+            </div>
+  
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+  
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+  
+        </div>
+    
+      </div>
+    </div>
+  </div>  
+<!-- navbar end -->
+
+
+
+<!-- hero section start -->
+<section class="hero-section">
+<div class="container py-5">
+        <div class="row">
+
+          <div class="col-md-3"></div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Event Booking Calendar</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="eventDate">Select Date:</label>
+                            <input type="date" id="eventDate" class="form-control">
+                        </div>
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3"></div>
+        </div>
+        
+
+        <div class="button d-flex justify-content-center mt-3">
+            <button type="button" class="btn btn-primary text-capitalize">Quote of the day</button>
+        </div>
+    </div>
+</section>
+<!-- hero section end -->
+
+
+
+
+<!-- photograph section start -->
+<section class="phototgraphs">
+    <div class="container my-5">
+        <h2 class="text-center">Gallery</h2>
+        <div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <img src="assets/images/img1.jpg" class="img-fluid" alt="Image 1">
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <img src="assets/images/img2.jpg" class="img-fluid" alt="Image 2">
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <img src="assets/images/img3.jpg" class="img-fluid" alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <img src="assets/images/img4.jpg" class="img-fluid" alt="Image 4">
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <img src="assets/images/img5.jpg" class="img-fluid" alt="Image 5">
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <img src="assets/images/img6.jpg" class="img-fluid" alt="Image 6">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <a class="carousel-control-prev" href="#imageSlider" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#imageSlider" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- photograph section end -->
+
+
+<!-- upcoming events start -->
+<section class="upcoming-events">
+    <div class="container py-5">
+    
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h2 class="text-left">Upcoming Events</h2>
+
+                <ul class="list-group mt-4">
+                    <li class="list-group-item">Upcomning Event 1 - date 23 sep 2023</li>
+                    <li class="list-group-item">Upcomning Event 2 - date 23 sep 2023</li>
+                    <li class="list-group-item">Upcomning Event 3 - date 23 sep 2023</li>
+                    <li class="list-group-item">Upcomning Event 4 - date 23 sep 2023</li>
+                    <li class="list-group-item">Upcomning Event 5 - date 23 sep 2023</li>
+                  </ul>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                <img src="assets/images/event.jpg" class="img-fluid" alt="event">
+            </div>
+        
+          </div>
+
+    </div>
+</section>
+<!-- upcoming events  end -->
+
+
+<!-- footer start -->
+<section>
+    <footer class="py-3 bg-dark text-white">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li><a href="#" class="px-2"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+        <li><a href="#" class="px-2"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#" class="px-2"><i class="fa fa-twitter" aria-hidden="true"></i></i></a></li>
+    </ul>
+      <p class="text-center">&copy; Copyright 2023 | All Right Reserved</p>
+    </footer>
+</section>
+<!-- footer end -->
+
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize FullCalendar
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth', 
+                selectable: true,
+                dateClick: function (info) {
+                    document.getElementById('eventDate').value = info.dateStr;
+                },
+            });
+
+            calendar.render();
+        });
+    </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.2/fullcalendar.min.js"></script>
+    
+</body>
+</html>
